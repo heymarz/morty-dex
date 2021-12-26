@@ -1,0 +1,124 @@
+{
+  "Mortys'": [
+    {
+     "id": 1,
+     "name": "Scruffy Morty",
+     "type":"Rock",
+     "height": "5 feet, 2 inches",
+     "weight": "108.4 lbs",
+     "rare": "false",
+     "characteristics": "Easy going, Unconventional",
+     "image": "https://imgur.com/WX4jFyi"
+    },
+    {
+      "id": 2,
+      "name": "Unkempt Morty",
+      "type":"Rock",
+      "height": "5 feet, 2 inches",
+      "weight": "109.3 lbs",
+      "rare": "false",
+      "characteristics": "Stinky, Likes garlic",
+      "image": "https://imgur.com/V1tOFSn"
+     },
+     {
+      "id": 3,
+      "name": "Hippy Morty",
+      "type":"Paper",
+      "height": "5 feet, 2 inches",
+      "weight": "108.8 lbs",
+      "rare": "false",
+      "characteristics": "Wants love, not war",
+      "image": "https://imgur.com/pngUvtM"
+     },
+     {
+      "id": 4,
+      "name": "Hipster Morty",
+      "type": "Scissors",
+      "height": "5 feet, 2 inches",
+      "weight": "111.2 lbs",
+      "rare": "false",
+      "characteristics": "Hip, Cool, Bored of life",
+      "image": "https://imgur.com/E9QLzvm"
+     },
+     {
+      "id": 5,
+      "name": "Mustache Morty",
+      "type": "Scissors",
+      "height": "5 feet, 2 inches",
+      "weight": "110.3 lbs",
+      "rare": "false",
+      "characteristics": "Coffee Drinker, Perfumed",
+      "image": "https://imgur.com/SLxB96M"
+     },
+     {
+      "id": 6,
+      "name": "Stray Cat Morty",
+      "type": "Scissors",
+      "height": "5 feet, 2 inches",
+      "weight": "122.5 lbs",
+      "rare": "true",
+      "characteristics": "Picks up stray cats",
+      "image": "https://imgur.com/77EGKwd"
+     },
+     {
+      "id": 7,
+      "name": "Biker Morty",
+      "type": "Rock",
+      "height": "5 feet, 2 inches",
+      "weight": "114.8 lbs",
+      "rare": "false",
+      "characteristics": "Wild and free",
+      "image": "https://imgur.com/XxIQHHS"
+     },
+     {
+      "id": 8,
+      "name": "Buff Morty",
+      "type": "Rock",
+      "height": "5 feet, 9 inches",
+      "weight": "140.6 lbs",
+      "rare": "false",
+      "characteristics": "Pumped, Toned",
+       "image": "https://imgur.com/Xv9rOzD"
+     },
+     {
+      "id": 9,
+      "name": "Wizard Morty",
+      "type": "Rock",
+      "height": "5 feet, 5 inches",
+      "weight": "118.7 lbs",
+      "rare": "false",
+      "characteristics": "Always precisely on time",
+      "image": "https://imgur.com/5uTsWSK"
+     },
+     {
+      "id": 10,
+      "name": "Jerry Fan Morty",
+      "type": "Paper",
+      "height": "5 feet, 3 inches",
+      "weight": "116.3 lbs",
+      "rare": "true",
+      "characteristics": "Easily pleased",
+      "image": "https://imgur.com/V790KKF"
+     },
+     {
+      "id": 11,
+      "name": "Unicorn Chaser Morty",
+      "type": "Rock",
+      "height": "5 feet, 2 inches",
+      "weight": "110.2 lbs",
+      "rare": "false",
+      "characteristics": "Hopeful, Pink",
+      "image": "https://imgur.com/JNaDLAg"
+     },
+     {
+      "id": 12,
+      "name": "Mermaid Morty",
+      "type": "Rock",
+      "height": "5 feet, 2 inches",
+      "weight": "137.4 lbs",
+      "rare": "false",
+      "characteristics": "Beautiful singing voice",
+      "image": "https://imgur.com/YyQAv6O"
+     }
+  ]
+}
