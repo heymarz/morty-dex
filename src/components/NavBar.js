@@ -74,7 +74,8 @@ const NavBar = () => {
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
             <Button color="inherit" component={ Link } to="/">Morty-dex</Button>
-            <Button color="inherit" component={ Link } to="/Mortys/new">Morty form</Button>
+            <Button color="inherit" component={ Link } to="/Mortys/favorites">Fav-Mortys</Button>
+            <Button color="inherit" component={ Link } to="/Mortys/new">Morty-form</Button>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -86,7 +87,7 @@ const NavBar = () => {
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
-              // Need to link DetailMorty as the display component when search form is submited
+              
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>

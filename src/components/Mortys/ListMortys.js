@@ -1,9 +1,14 @@
 import React from 'react'
 
-const ListMortys = () => {
+
+function ListMortys() {
+  
+
+
   return (
     <div>
-      <h1>List Mortys</h1>
+      <h1>List of Mortys</h1>
+      
     </div>
   )
 }

@@ -1,5 +1,5 @@
 {
-  "Mortys'": [
+  "Mortys": [
     {
      "id": 1,
      "name": "Scruffy Morty",
@@ -8,7 +8,8 @@
      "weight": "108.4 lbs",
      "rare": "false",
      "characteristics": "Easy going, Unconventional",
-     "image": "https://imgur.com/WX4jFyi"
+     "image": "https://imgur.com/WX4jFyi",
+     "favorite": "false"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "weight": "109.3 lbs",
       "rare": "false",
       "characteristics": "Stinky, Likes garlic",
-      "image": "https://imgur.com/V1tOFSn"
+      "image": "https://imgur.com/V1tOFSn",
+      "favorite": "false"
      },
      {
       "id": 3,
@@ -28,7 +30,8 @@
       "weight": "108.8 lbs",
       "rare": "false",
       "characteristics": "Wants love, not war",
-      "image": "https://imgur.com/pngUvtM"
+      "image": "https://imgur.com/pngUvtM",
+      "favorite": "false"
      },
      {
       "id": 4,
@@ -38,7 +41,8 @@
       "weight": "111.2 lbs",
       "rare": "false",
       "characteristics": "Hip, Cool, Bored of life",
-      "image": "https://imgur.com/E9QLzvm"
+      "image": "https://imgur.com/E9QLzvm",
+      "favorite": "true"
      },
      {
       "id": 5,
@@ -48,7 +52,8 @@
       "weight": "110.3 lbs",
       "rare": "false",
       "characteristics": "Coffee Drinker, Perfumed",
-      "image": "https://imgur.com/SLxB96M"
+      "image": "https://imgur.com/SLxB96M",
+      "favorite": "false"
      },
      {
       "id": 6,
@@ -58,7 +63,8 @@
       "weight": "122.5 lbs",
       "rare": "true",
       "characteristics": "Picks up stray cats",
-      "image": "https://imgur.com/77EGKwd"
+      "image": "https://imgur.com/77EGKwd",
+      "favorite": "false"
      },
      {
       "id": 7,
@@ -68,7 +74,8 @@
       "weight": "114.8 lbs",
       "rare": "false",
       "characteristics": "Wild and free",
-      "image": "https://imgur.com/XxIQHHS"
+      "image": "https://imgur.com/XxIQHHS",
+      "favorite": "false"
      },
      {
       "id": 8,
@@ -78,7 +85,8 @@
       "weight": "140.6 lbs",
       "rare": "false",
       "characteristics": "Pumped, Toned",
-       "image": "https://imgur.com/Xv9rOzD"
+       "image": "https://imgur.com/Xv9rOzD",
+       "favorite": "true"
      },
      {
       "id": 9,
@@ -88,7 +96,8 @@
       "weight": "118.7 lbs",
       "rare": "false",
       "characteristics": "Always precisely on time",
-      "image": "https://imgur.com/5uTsWSK"
+      "image": "https://imgur.com/5uTsWSK",
+      "favorite": "false"
      },
      {
       "id": 10,
@@ -98,7 +107,8 @@
       "weight": "116.3 lbs",
       "rare": "true",
       "characteristics": "Easily pleased",
-      "image": "https://imgur.com/V790KKF"
+      "image": "https://imgur.com/V790KKF",
+      "favorite": "false"
      },
      {
       "id": 11,
@@ -108,7 +118,8 @@
       "weight": "110.2 lbs",
       "rare": "false",
       "characteristics": "Hopeful, Pink",
-      "image": "https://imgur.com/JNaDLAg"
+      "image": "https://imgur.com/JNaDLAg",
+      "favorite": "false"
      },
      {
       "id": 12,
@@ -118,7 +129,8 @@
       "weight": "137.4 lbs",
       "rare": "false",
       "characteristics": "Beautiful singing voice",
-      "image": "https://imgur.com/YyQAv6O"
+      "image": "https://imgur.com/YyQAv6O",
+      "favorite": "false"
      }
   ]
 }
