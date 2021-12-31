@@ -9,6 +9,7 @@ import ErrorPage from "./components/ErrorPage";
 
 function App() {
   const [submittedData, setSubmittedData] = useState([]);
+  const [favorite, setFavorite] = useState(false);
 
   useEffect(()=>{
     fetch('http://localhost:3001/Mortys')
@@ -21,11 +22,39 @@ function App() {
    <Router>
       <NavBar />
         <Routes>
-          <Route path="/Mortys/new" element= {<NewMortys setData={setSubmittedData} submittedData={submittedData} />} />
-          <Route path="/Mortys/favorites" element={<FavoriteMortys submittedData={submittedData} />} />
-          <Route path="/Morty/:id" element={<DetailMorty />} />
-          <Route path="/" element={<Home submittedData={submittedData} />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route 
+            path="/Mortys/new" 
+            element= {
+              <NewMortys 
+                setData={setSubmittedData}
+                submittedData={submittedData} 
+                favorite={favorite} 
+              />} 
+          />
+          <Route 
+            path="/Mortys/favorites" 
+            element={
+              <FavoriteMortys 
+                submittedData={submittedData}   
+            />} 
+          />
+          <Route 
+            exact path=":id" 
+            element={
+            <DetailMorty />} 
+          />
+          
+          <Route path="/" element={
+          <Home 
+            submittedData={submittedData} 
+            setFavorite={setFavorite} 
+            favorite={favorite} 
+            />} 
+          />
+          <Route 
+            path="*" 
+            element={<ErrorPage />} 
+          />
         </Routes>
     </Router>
   </div>

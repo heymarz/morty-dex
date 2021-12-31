@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 
-function NewMortys({ submittedData, setData }){
+function NewMortys({ submittedData, setData, favorite }){
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [height, setHeight] = useState("");
-  const [rare, setRare] = useState("");
+  const [rare, setRare] = useState(false);
   const [characteristics, setCharacteristics] = useState("");
-  const [img, setImg] = useState("");
-  const [favorite, setFavorite] = useState(false)
+  const [image, setImg] = useState("");
   
   function handleSubmit(e){
     e.preventDefault();
@@ -17,25 +16,30 @@ function NewMortys({ submittedData, setData }){
       height: height,
       rare: rare,
       characteristics: characteristics,
-      img: img,
+      image: image,
       favorite: favorite
     };
-    const dataArray = 
     fetch("http://localhost:3001/Mortys",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Accepts": "application/json",
       },
-      body: JSON.stringify(submittedData)
+      body: JSON.stringify(formData)
     });
     setData(...submittedData, formData)
   }
-
+  
+  function handleCheckbox(e) {
+    if(e.target.checked){
+      setRare((rare)=> !rare)
+    }else{setRare(!rare)}
+  }
+  
   return (
     <section>
       <h1>New Morty Form</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name" >Name:
           <input
           type="text"
@@ -45,8 +49,8 @@ function NewMortys({ submittedData, setData }){
         </label>
         <br />
         <label htmlFor="type">Type?</label>
-        <select>
-          <option value={type.rock}>Rock</option>
+        <select onChange={(e)=>setType(e.target.value)}>
+          <option value={type.rock} >Rock</option>
           <option value={type.paper}>Paper</option>
           <option value={type.scissor}>Scissor</option>
         </select>
@@ -60,8 +64,8 @@ function NewMortys({ submittedData, setData }){
 
         </label>
         <br />
-        <input type="checkbox" id="rare" name={rare} />
         <label htmlFor="rare">Rare?</label>
+        <input type="checkbox" id={rare.toString()} name={rare.toString()} onClick={handleCheckbox} />
         <br />
         <label htmlFor="characteristics">List characteristic(s):
           <input
@@ -74,12 +78,12 @@ function NewMortys({ submittedData, setData }){
         <label htmlFor="image">Upload Image:
           <input
           type="text"
-          value={img}
+          value={image}
           onChange={(e)=>setImg(e.target.value)}
           />
         </label>
         <br />
-        <button type="submit" onSubmit={handleSubmit}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </section>
   )
