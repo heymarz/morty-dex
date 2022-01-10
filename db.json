@@ -8,8 +8,7 @@
       "weight": "108.4 lbs",
       "rare": false,
       "characteristics": "Easy going, Unconventional",
-      "image": "https://imgur.com/WX4jFyi.png",
-      "favorite": true
+      "image": "https://imgur.com/WX4jFyi.png"
     },
     {
       "id": 2,
@@ -19,8 +18,7 @@
       "weight": "109.3 lbs",
       "rare": false,
       "characteristics": "Stinky, Likes garlic",
-      "image": "https://imgur.com/V1tOFSn.png",
-      "favorite": false
+      "image": "https://imgur.com/V1tOFSn.png"
     },
     {
       "id": 3,
@@ -30,8 +28,7 @@
       "weight": "108.8 lbs",
       "rare": false,
       "characteristics": "Wants love, not war",
-      "image": "https://imgur.com/pngUvtM.png",
-      "favorite": false
+      "image": "https://imgur.com/pngUvtM.png"
     },
     {
       "id": 4,
@@ -41,8 +38,7 @@
       "weight": "111.2 lbs",
       "rare": false,
       "characteristics": "Hip, Cool, Bored of life",
-      "image": "https://imgur.com/E9QLzvm.png",
-      "favorite": false
+      "image": "https://imgur.com/E9QLzvm.png"
     },
     {
       "id": 5,
@@ -52,8 +48,7 @@
       "weight": "110.3 lbs",
       "rare": false,
       "characteristics": "Coffee Drinker, Perfumed",
-      "image": "https://imgur.com/SLxB96M.png",
-      "favorite": true
+      "image": "https://imgur.com/SLxB96M.png"
     },
     {
       "id": 6,
@@ -63,8 +58,7 @@
       "weight": "122.5 lbs",
       "rare": true,
       "characteristics": "Picks up stray cats",
-      "image": "https://imgur.com/77EGKwd.png",
-      "favorite": false
+      "image": "https://imgur.com/77EGKwd.png"
     },
     {
       "id": 7,
@@ -74,8 +68,7 @@
       "weight": "114.8 lbs",
       "rare": false,
       "characteristics": "Wild and free",
-      "image": "https://imgur.com/XxIQHHS.png",
-      "favorite": false
+      "image": "https://imgur.com/XxIQHHS.png"
     },
     {
       "id": 8,
@@ -85,8 +78,7 @@
       "weight": "140.6 lbs",
       "rare": false,
       "characteristics": "Pumped, Toned",
-      "image": "https://imgur.com/Xv9rOzD.png",
-      "favorite": true
+      "image": "https://imgur.com/Xv9rOzD.png"
     },
     {
       "id": 9,
@@ -96,8 +88,7 @@
       "weight": "118.7 lbs",
       "rare": false,
       "characteristics": "Always precisely on time",
-      "image": "https://imgur.com/5uTsWSK.png",
-      "favorite": false
+      "image": "https://imgur.com/5uTsWSK.png"
     },
     {
       "id": 10,
@@ -107,8 +98,7 @@
       "weight": "116.3 lbs",
       "rare": true,
       "characteristics": "Easily pleased",
-      "image": "https://imgur.com/V790KKF.png",
-      "favorite": false
+      "image": "https://imgur.com/V790KKF.png"
     },
     {
       "id": 11,
@@ -118,8 +108,7 @@
       "weight": "110.2 lbs",
       "rare": false,
       "characteristics": "Hopeful, Pink",
-      "image": "https://imgur.com/JNaDLAg.png",
-      "favorite": false
+      "image": "https://imgur.com/JNaDLAg.png"
     },
     {
       "id": 12,
@@ -129,17 +118,15 @@
       "weight": "137.4 lbs",
       "rare": false,
       "characteristics": "Beautiful singing voice",
-      "image": "https://imgur.com/YyQAv6O.png",
-      "favorite": false
+      "image": "https://imgur.com/YyQAv6O.png"
     },
     {
-      "name": "Business Morty",
-      "type": "Paper",
-      "height": "850",
-      "rare": true,
-      "characteristics": "MEAN",
-      "image": "",
-      "favorite": false,
+      "name": "try",
+      "type": "",
+      "height": "",
+      "rare": false,
+      "characteristics": "",
+      "image": "imgag;oah",
       "id": 13
     }
   ]

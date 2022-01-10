@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function NewMortys({ submittedData, setData, favorite }){
+function NewMortys({ onNewMorty }){
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [height, setHeight] = useState("");
@@ -16,9 +16,9 @@ function NewMortys({ submittedData, setData, favorite }){
       height: height,
       rare: rare,
       characteristics: characteristics,
-      image: image,
-      favorite: favorite
+      image: image
     };
+    
     fetch("http://localhost:3001/Mortys",{
       method: "POST",
       headers: {
@@ -26,8 +26,16 @@ function NewMortys({ submittedData, setData, favorite }){
         "Accepts": "application/json",
       },
       body: JSON.stringify(formData)
-    });
-    setData(...submittedData, formData)
+    })
+    .then(r=>r.json())
+    .then((newMorty)=>onNewMorty(newMorty))
+    
+    setName('');
+    setType('paper');
+    setHeight('');
+    setRare("checked")
+    setCharacteristics('');
+    setImg('')
   }
   
   function handleCheckbox(e) {
@@ -44,6 +52,7 @@ function NewMortys({ submittedData, setData, favorite }){
           <input
           type="text"
           value= {name}
+          placeholder='New Morty'
           onChange={(e)=>setName(e.target.value)}
           />
         </label>
@@ -59,9 +68,9 @@ function NewMortys({ submittedData, setData, favorite }){
           <input
           type="number"
           value={height}
+          placeholder='300 inches'
           onChange={(e)=>setHeight(e.target.value)}
           />
-
         </label>
         <br />
         <label htmlFor="rare">Rare?</label>
@@ -71,6 +80,7 @@ function NewMortys({ submittedData, setData, favorite }){
           <input
           type="text"
           value={characteristics}
+          placeholder='eg. traits, likes, dislikes'
           onChange={(e)=>setCharacteristics(e.target.value)}
           />
         </label>
@@ -79,11 +89,19 @@ function NewMortys({ submittedData, setData, favorite }){
           <input
           type="text"
           value={image}
+          placeholder='input img here'
           onChange={(e)=>setImg(e.target.value)}
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        {/* <label html="favorite">
+         <input 
+         type="hidden" 
+         value="false"
+         ref={x => {setFavorite(false)}}
+          />
+        </label> */}
+       <button type="submit">Submit</button>
       </form>
     </section>
   )

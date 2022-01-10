@@ -1,21 +1,34 @@
 import React,{useEffect,useState} from "react";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import FavoriteMortys from "./components/Mortys/FavoriteMortys";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewMortys from "./components/Mortys/NewMortys";
-import DetailMorty from "./components/Mortys/DetailMorty";
 import ErrorPage from "./components/ErrorPage";
+import Search from "./components/Search";
 
 function App() {
   const [submittedData, setSubmittedData] = useState([]);
-  const [favorite, setFavorite] = useState(false);
-
+  const [search, setSearch] = useState("")
+ 
   useEffect(()=>{
     fetch('http://localhost:3001/Mortys')
     .then((resp)=>resp.json())
     .then((data)=> setSubmittedData(data)) 
   },[])
+
+  const displayMorty = submittedData.filter((morty)=>{
+    return morty.name.toLowerCase().includes(search.toLowerCase())
+  })
+
+  function handleAddMorty(newMorty){
+    const updatedMortyArray= [...submittedData, newMorty];
+    setSubmittedData(updatedMortyArray)
+  }
+
+  function handleDeleteMorty(id){
+    const updatedMortyArray = submittedData.filter((morty)=> morty.id !== id);
+    setSubmittedData(updatedMortyArray)
+  }
 
   return (
     <div>
@@ -25,31 +38,23 @@ function App() {
           <Route 
             path="/Mortys/new" 
             element= {
-              <NewMortys 
-                setData={setSubmittedData}
-                submittedData={submittedData} 
-                favorite={favorite} 
-              />} 
+              <NewMortys onNewMorty={handleAddMorty} />} 
           />
           <Route 
-            path="/Mortys/favorites" 
-            element={
-              <FavoriteMortys 
-                submittedData={submittedData}   
-            />} 
+            path="/" 
+            element= {
+              <Home 
+              displayMorty={displayMorty}
+              handleDeleteMorty={handleDeleteMorty}
+               />
+              }
           />
           <Route 
-            exact path=":id" 
-            element={
-            <DetailMorty />} 
-          />
-          
-          <Route path="/" element={
-          <Home 
-            submittedData={submittedData} 
-            setFavorite={setFavorite} 
-            favorite={favorite} 
-            />} 
+            path="/Mortys/search" 
+            element= {
+              <Search 
+              setSearch={setSearch} searchTerm={search} />
+              }
           />
           <Route 
             path="*" 
