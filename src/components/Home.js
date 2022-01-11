@@ -1,13 +1,13 @@
 import React from 'react';
 import ListMortys from './Mortys/ListMortys';
 
-function Home({ displayMorty, handleDeleteMorty }) {
+function Home({ displayMortys, handleDeleteMorty }) {
   return (
     <div>
       <h1>Welcome to the Morty-dex!</h1>
-      <ListMortys displayMorty={displayMorty} handleDeleteMorty={handleDeleteMorty} />
+      <ListMortys displayMortys={displayMortys} handleDeleteMorty={handleDeleteMorty} />
     </div>
   )
 }
 
-export default Home;
+export default Home

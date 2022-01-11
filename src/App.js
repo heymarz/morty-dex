@@ -8,16 +8,16 @@ import Search from "./components/Search";
 
 function App() {
   const [submittedData, setSubmittedData] = useState([]);
-  const [search, setSearch] = useState("")
+  const [searchTerm, setSearch] = useState("")
  
   useEffect(()=>{
     fetch('http://localhost:3001/Mortys')
     .then((resp)=>resp.json())
-    .then((data)=> setSubmittedData(data)) 
+    .then(setSubmittedData) 
   },[])
-
-  const displayMorty = submittedData.filter((morty)=>{
-    return morty.name.toLowerCase().includes(search.toLowerCase())
+  
+  const displayMortys = submittedData.filter((morty)=>{
+    return morty.name.toLowerCase().includes(searchTerm.toLowerCase())
   })
 
   function handleAddMorty(newMorty){
@@ -44,7 +44,7 @@ function App() {
             path="/" 
             element= {
               <Home 
-              displayMorty={displayMorty}
+              displayMortys={displayMortys}
               handleDeleteMorty={handleDeleteMorty}
                />
               }
@@ -52,8 +52,7 @@ function App() {
           <Route 
             path="/Mortys/search" 
             element= {
-              <Search 
-              setSearch={setSearch} searchTerm={search} />
+              <Search onSearch={setSearch} />
               }
           />
           <Route 
