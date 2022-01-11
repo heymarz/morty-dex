@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {useNavigate} from "react-router-dom"
 
 function NewMortys({ onNewMorty }){
   const [name, setName] = useState("");
@@ -7,6 +8,7 @@ function NewMortys({ onNewMorty }){
   const [rare, setRare] = useState(false);
   const [characteristics, setCharacteristics] = useState("");
   const [image, setImg] = useState("");
+  let navigate = useNavigate();
   
   function handleSubmit(e){
     e.preventDefault();
@@ -28,12 +30,14 @@ function NewMortys({ onNewMorty }){
       body: JSON.stringify(formData)
     })
     .then(r=>r.json())
-    .then((newMorty)=>onNewMorty(newMorty))
-    
+    .then((newMorty)=>{
+      navigate('/')
+      onNewMorty(newMorty)})
+    //put curly brackets here and put the redirect here (useNavigate)
     setName('');
     setType('paper');
     setHeight('');
-    setRare("checked")
+    setRare("checked");
     setCharacteristics('');
     setImg('')
   }

@@ -1,11 +1,13 @@
 import React from 'react';
-import ListMortys from './Mortys/ListMortys';
 
-function Home({ displayMortys, handleDeleteMorty }) {
+
+function Home({ displayMortys }) {
   return (
     <div>
       <h1>Welcome to the Morty-dex!</h1>
-      <ListMortys displayMortys={displayMortys} handleDeleteMorty={handleDeleteMorty} />
+      <ul className="cards">
+      {displayMortys}
+      </ul>
     </div>
   )
 }

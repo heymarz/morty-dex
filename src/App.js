@@ -4,21 +4,33 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewMortys from "./components/Mortys/NewMortys";
 import ErrorPage from "./components/ErrorPage";
-import Search from "./components/Search";
+import MortyCard from "./components/Mortys/MortyCard";
+
 
 function App() {
   const [submittedData, setSubmittedData] = useState([]);
-  const [searchTerm, setSearch] = useState("")
+  const [searchTerm, setSearchTerm] = useState("")
  
   useEffect(()=>{
     fetch('http://localhost:3001/Mortys')
     .then((resp)=>resp.json())
-    .then(setSubmittedData) 
+    .then(data=>setSubmittedData(data)) 
   },[])
   
-  const displayMortys = submittedData.filter((morty)=>{
-    return morty.name.toLowerCase().includes(searchTerm.toLowerCase())
-  })
+  const displayMortys = submittedData
+  .filter((morty)=>
+    morty.name.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+  .map((morty) => {
+    return (
+      <MortyCard 
+        className="mortycards"
+        key={morty.id}
+        morty ={morty}  
+        handleDeleteMorty={handleDeleteMorty}
+      />
+    )
+    })
 
   function handleAddMorty(newMorty){
     const updatedMortyArray= [...submittedData, newMorty];
@@ -30,13 +42,17 @@ function App() {
     setSubmittedData(updatedMortyArray)
   }
 
+  function handleSearch(newSearch){
+    setSearchTerm(newSearch)
+  }
+
   return (
     <div>
    <Router>
-      <NavBar />
+      <NavBar onSearch={handleSearch} />
         <Routes>
           <Route 
-            path="/Mortys/new" 
+            path="/mortys/new" 
             element= {
               <NewMortys onNewMorty={handleAddMorty} />} 
           />
@@ -47,12 +63,6 @@ function App() {
               displayMortys={displayMortys}
               handleDeleteMorty={handleDeleteMorty}
                />
-              }
-          />
-          <Route 
-            path="/Mortys/search" 
-            element= {
-              <Search onSearch={setSearch} />
               }
           />
           <Route 
