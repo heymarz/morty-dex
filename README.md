@@ -19,6 +19,8 @@ then open another terminal and start your server by typing:
 
 ## Features(MVP)
 
+![front page of Morty-Dex](/Website.png)
+
 The **navbar** is located on the top of the screen and is an easy way to access the application. 
 
 Starting off with the **home page**, the data will display with a picture of each Morty that exists in the Morty-dex.

@@ -1,11 +1,9 @@
 .cards{
   width: 32%;
-  padding-bottom: 32%;
   margin-bottom: 2%;
   position: relative;
 }
 .container{
   display: flex;
-flex-wrap: wrap;
-
+  flex-wrap: wrap;
 }
