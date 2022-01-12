@@ -24,7 +24,6 @@ function App() {
   .map((morty) => {
     return (
       <MortyCard 
-        className="mortycards"
         key={morty.id}
         morty ={morty}  
         handleDeleteMorty={handleDeleteMorty}

@@ -1,4 +1,5 @@
 import React from 'react';
+import "../myStyles.css"
 
 function MortyCard ({morty, handleDeleteMorty}){
   const {id, name, image, type, weight, height, rare, characteristics} = morty
@@ -11,7 +12,7 @@ function MortyCard ({morty, handleDeleteMorty}){
   }
 
   return (
-    <div>
+    <div className='cards'>
       <h2>{name}</h2>
       <img src={image} alt={name} height="150" />
       <p>Type: {type} <br />
