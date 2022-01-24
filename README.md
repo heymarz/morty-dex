@@ -14,7 +14,7 @@ Start the system up by typing
 
 then open another terminal and start your server by typing:
 
-> "db.json --watch json-server -p 3001".
+> "json-server --watch db.json -p 3001".
 
 
 ## Features(MVP)
