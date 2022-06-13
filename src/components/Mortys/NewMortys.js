@@ -20,7 +20,7 @@ function NewMortys({ onNewMorty }){
       characteristics: characteristics,
       image: image
     };
-    //post a new morty and redirect back to the home page
+    
     fetch("http://localhost:3001/Mortys",{
       method: "POST",
       headers: {
@@ -33,7 +33,7 @@ function NewMortys({ onNewMorty }){
     .then((newMorty)=>{
       navigate('/')
       onNewMorty(newMorty)})
-    //reset values
+    
     setName('');
     setType('paper');
     setHeight('');

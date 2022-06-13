@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from "react";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import NewMortys from "./components/Mortys/NewMortys";
 import ErrorPage from "./components/ErrorPage";
 import MortyCard from "./components/Mortys/MortyCard";
@@ -51,11 +51,6 @@ function App() {
       <NavBar onSearch={handleSearch} />
         <Routes>
           <Route 
-            path="/mortys/new" 
-            element= {
-              <NewMortys onNewMorty={handleAddMorty} />} 
-          />
-          <Route 
             path="/" 
             element= {
               <Home 
@@ -63,6 +58,11 @@ function App() {
               handleDeleteMorty={handleDeleteMorty}
                />
               }
+          />
+          <Route 
+            path="/mortys/new" 
+            element= {
+              <NewMortys onNewMorty={handleAddMorty} />} 
           />
           <Route 
             path="*" 
