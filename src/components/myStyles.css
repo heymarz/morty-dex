@@ -1,7 +1,9 @@
 .cards{
   width: 32%;
-  margin-bottom: 2%;
+  margin: 1%;
   position: relative;
+  border: 3px solid royalblue;
+  text-align: center;
 }
 .container{
   display: flex;
@@ -9,5 +11,15 @@
 }
 .emoji-button-delete{
   align-items: center;
-  
+}
+.pageHeader{
+  color: forestgreen;
+  text-align: center;
+}
+.formInput{
+  display: center;
+  text-align: center;
+  position: relative;
+  width: 350px;
+  justify-content: center;
 }
