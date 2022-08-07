@@ -6,6 +6,7 @@ function Search ({onSearch}) {
   function handleSubmit(e){
     e.preventDefault();
     onSearch(search)
+    setSearch("")
   }
 
   return (
