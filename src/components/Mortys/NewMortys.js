@@ -4,10 +4,12 @@ import {useNavigate} from "react-router-dom"
 function NewMortys({ onNewMorty }){
   const [name, setName] = useState("");
   const [type, setType] = useState("");
-  const [height, setHeight] = useState("");
+  const [feet, setFeet] = useState("");
+  const [inches, setInches] = useState("");
   const [rare, setRare] = useState(false);
   const [characteristics, setCharacteristics] = useState("");
   const [image, setImg] = useState("");
+  const [height, setHeight] = useState("")
   let navigate = useNavigate();
   
   function handleSubmit(e){
@@ -20,7 +22,7 @@ function NewMortys({ onNewMorty }){
       characteristics: characteristics,
       image: image
     };
-    
+    console.log(formData)
     fetch("http://localhost:3001/Mortys",{
       method: "POST",
       headers: {
@@ -32,14 +34,21 @@ function NewMortys({ onNewMorty }){
     .then(r=>r.json())
     .then((newMorty)=>{
       navigate('/')
-      onNewMorty(newMorty)})
-    
+      onNewMorty(newMorty)
+    })
     setName('');
     setType('paper');
-    setHeight('');
+    setFeet('');
+    setInches('');
+    setInches('');
     setRare("checked");
     setCharacteristics('');
-    setImg('')
+    setImg('');
+  }
+
+  function handleHeight(){
+    const height = feet + " feet, " + inches + " inches"
+    setHeight(height)
   }
   
   function handleCheckbox(e) {
@@ -49,9 +58,9 @@ function NewMortys({ onNewMorty }){
   }
   
   return (
-    <section>
+    <section >
       <h1>New Morty Form</h1>
-      <form onSubmit={handleSubmit}>
+      <form className='formInput' onSubmit={handleSubmit}>
         <label htmlFor="name" >Name:
           <input
           type="text"
@@ -71,9 +80,15 @@ function NewMortys({ onNewMorty }){
         <label htmlFor="height">Height:
           <input
           type="number"
-          value={height}
-          placeholder='300 inches'
-          onChange={(e)=>setHeight(e.target.value)}
+          value={feet}
+          placeholder='5'
+          onChange={(e)=>setFeet(e.target.value)}
+          />
+          <input
+          type="number"
+          value={inches}
+          placeholder='10'
+          onChange={(e)=>setInches(e.target.value)}
           />
         </label>
         <br />
@@ -93,19 +108,19 @@ function NewMortys({ onNewMorty }){
           <input
           type="text"
           value={image}
-          placeholder='input img here'
+          placeholder='www.imgur.com/imageToUpload'
           onChange={(e)=>setImg(e.target.value)}
           />
         </label>
         <br />
-        {/* <label html="favorite">
+        {/* <label html="favorite">                           
          <input 
          type="hidden" 
          value="false"
          ref={x => {setFavorite(false)}}
           />
         </label> */}
-       <button type="submit">Submit</button>
+       <button type="submit" onClick={handleHeight}>Submit</button>
       </form>
     </section>
   )
